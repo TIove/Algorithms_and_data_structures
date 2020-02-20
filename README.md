@@ -1,5 +1,5 @@
 ![alt text](https://neerc.ifmo.ru/pcms2client/javax.faces.resource/top3.png.xhtml?ln=template)
-# Algorithms and data structures
+# Алгоритмы и структуры данных
 
 ## [Лабораторная работа №1](1_Laba/problems1.pdf)
 A. [A + B](1_Laba/A.py)  
