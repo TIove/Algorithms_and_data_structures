@@ -27,8 +27,8 @@ vector<char> bfs(vector<vector<char>>& maze, Point start, Point end) {
         }
 
         if (cur.y - 1 >= 0 && maze[cur.y - 1][cur.x] != '#' &&
-            path[cur.y - 1][cur.x].empty() &&
-            !(cur.x == start.x && cur.y - 1 == start.y)) {
+                path[cur.y - 1][cur.x].empty() &&
+                    !(cur.x == start.x && cur.y - 1 == start.y)) {
             path[cur.y - 1][cur.x] = path[cur.y][cur.x];
             path[cur.y - 1][cur.x].push_back('U');
             queue.push(Point(cur.x, cur.y - 1));

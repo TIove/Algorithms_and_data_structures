@@ -3,4 +3,4 @@ project(Algorithms_and_data_structures)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(Algorithms_and_data_structures 7_Laba/A.cpp)
+add_executable(Algorithms_and_data_structures 10_laba/D.cpp)

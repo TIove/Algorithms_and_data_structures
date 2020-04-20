@@ -6,7 +6,7 @@ int main() {
     ifstream in("input.txt");
     ofstream out("output.txt");
 
-    bool f = true;
+    bool isNoDirection = true;
     short n;
     in >> n;
 
@@ -19,17 +19,17 @@ int main() {
 
     for (short i = 0; i < n; ++i) {
         for (short j = 0; j < n; ++j) {
-            if (!f) {
+            if (!isNoDirection) {
                 break;
             }
             if (i == j && matrix[i][j] == 1) {
-                f = false;
+                isNoDirection = false;
             } else
-                f = matrix[i][j] == matrix[j][i] == 1;
+                isNoDirection = matrix[i][j] == matrix[j][i] == 1;
         }
     }
 
-    if (f)
+    if (isNoDirection)
         out << "YES";
     else
         out << "NO";

@@ -7,7 +7,7 @@ int main() {
     ifstream in("input.txt");
     ofstream out("output.txt");
 
-    bool f = false;
+    bool isParallel = false;
     short n, m;
     in >> n >> m;
 
@@ -17,13 +17,13 @@ int main() {
         short i, j;
         in >> i >> j;
         if (matrix[i - 1][j - 1] == 1 or matrix[j - 1][i - 1] == 1){
-            f = true;
+            isParallel = true;
         }
         matrix[i - 1][j - 1] = 1;
         matrix[j - 1][i - 1] = 1;
     }
 
-    if (f)
+    if (isParallel)
         out << "YES";
     else
         out << "NO";

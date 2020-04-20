@@ -3,13 +3,13 @@
 
 using namespace std;
 
-void bfs(
+void dfs(
         vector<vector<int>>& nodes, int nodeNumber, vector<int>& nodesComponents, int componentNumber) {
     
     nodesComponents[nodeNumber] = componentNumber;
     for (int i = 0; i < nodes[nodeNumber].size(); i++) {
         if (nodesComponents[nodes[nodeNumber][i]] == 0) {
-            bfs(nodes, nodes[nodeNumber][i], nodesComponents, componentNumber);
+            dfs(nodes, nodes[nodeNumber][i], nodesComponents, componentNumber);
         }
     }
 }
@@ -36,13 +36,13 @@ int main() {
     int componentNumber = 0;
     for (int i = 0; i < n; i++) {
         if (nodesComponents[i] == 0) {
-            bfs(nodes, i, nodesComponents, ++componentNumber);
+            dfs(nodes, i, nodesComponents, ++componentNumber);
         }
     }
 
     output << componentNumber << '\n';
     for (int i = 0; i < n; i++) {
-        output << nodesComponents[i] << " ";
+        output << nodesComponents[i] << ' ';
     }
 
     in.close();

@@ -40,11 +40,11 @@ int main() {
     }
     input.close();
 
-    vector<int> dest = bfs(nodes, 0);
+    vector<int> ans = bfs(nodes, 0);
 
     ofstream output("pathbge1.out");
-    for (int i : dest)
-        output << i << " ";
+    for (int i : ans)
+        output << i << ' ';
     output << '\n';
     output.close();
 
